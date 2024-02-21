@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: ostrich;
+  src: url("./ostrich-sans-master/OstrichSans-Light.otf");
+  letter-spacing: 20px;
+}
+
+@font-face {
+  font-family: stellar;
+  src: url("./PPStellar-Light.otf");
+  letter-spacing: 20px;
+}
+
+@font-face {
+  font-family: borg;
+  src: url("./Borg.ttf");
+  letter-spacing: 20px;
+}
+
+.fredoka-regular {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  /* font-variation-settings: "wdth" 100; */
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  background-color: #030303;
+  color: white;
+}
+
+/* NAVBAR  */
+
+nav {
+  padding: 30px 30px;
+  height: 150px;
+}
+
+#qmul-logo {
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  top: -15px;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.flex2 {
+  width: 30%;
+  min-width: 450px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+/* END OF NAVBAR  */
+
+/* HERO SECTION */
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container img {
+  object-fit: contain;
+  width: 500px;
+  padding-top: 70px;
+  border-radius: 30%;
+}
+
+.hero-text {
+  font-size: 30px;
+}
+
+#hero h2 {
+  font-family: stellar;
+}
+
+.hero-btn {
+  padding: 20px 60px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, #00ffa3, #800080);
+  cursor: pointer;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  background-color: black;
+  z-index: -1;
+  transition: 200ms;
+}
+.hero-btn::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(to left, #00ffa3, #800080);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 200ms;
+}
+.hero-btn:hover::before {
+  opacity: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: white;
+}
+.hero-btn:hover {
+  color: black;
+}
+.arrow-icon {
+  font-size: 25px;
+  color: grey;
+  scale: 1;
+  /* //transform: scale(1.5); */
+  transition: transform 1500ms;
+}
+
+/* .arrow-icon:hover {
+  transform: translateY(20px);
+} */
+
+/* END OF HERO  */
