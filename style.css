@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -116,6 +121,10 @@ nav {
 
 /* HERO SECTION */
 
+#hero {
+  margin-bottom: 500px;
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -189,7 +198,7 @@ nav {
 
 /* END OF HERO  */
 
-/* IMAGE SLIDESHOW  */
+/* PRODUCT SECTION*/
 
 #product {
   position: relative;
@@ -198,12 +207,14 @@ nav {
   margin: 150px auto;
   perspective: 1400px;
   transform-style: preserve-3d;
+
   /* background-color: red; */
 }
 #product h2 {
   position: relative;
-  top: -150px;
+  top: -200px;
   text-align: center;
+  padding: 50px;
 }
 
 #product label,
@@ -225,6 +236,7 @@ nav {
   object-fit: cover;
 }
 
+/* IMAGE SLIDESHOW  */
 .card {
   position: relative;
   width: 100%;
@@ -296,9 +308,11 @@ nav {
   }
 }
 
+/* END OF IMAGE SLIDESHOW  */
+
 input[type="radio"] {
   position: relative;
-  top: 100%;
+  top: 0%;
   left: 50%;
   width: 18px;
   height: 18px;
@@ -306,4 +320,18 @@ input[type="radio"] {
   opacity: 0;
 }
 
-/* END OF IMAGE SLIDESHOW  */
+/* PRODUCT SECTION*/
+
+/* VIDEO SECTION */
+
+#video-section {
+}
+
+#video {
+  border-radius: 10px;
+}
+
+#video-section h2 {
+  margin-bottom: 100px;
+}
+/* END OF VIDEO SECTION */
