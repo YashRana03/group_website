@@ -63,10 +63,16 @@ html {
 body {
   background-color: #030303;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
   color: white;
+}
+
+a button:hover {
+  color: black;
 }
 
 /* NAVBAR  */
@@ -316,8 +322,8 @@ input[type="radio"] {
   left: 50%;
   width: 18px;
   height: 18px;
-  cursor: pointer;
   opacity: 0;
+  background-color: red;
 }
 
 /* PRODUCT SECTION*/
@@ -325,6 +331,7 @@ input[type="radio"] {
 /* VIDEO SECTION */
 
 #video-section {
+  margin-bottom: 200px;
 }
 
 #video {
@@ -335,3 +342,120 @@ input[type="radio"] {
   margin-bottom: 100px;
 }
 /* END OF VIDEO SECTION */
+
+#contributors {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.contributors-container {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contributor-card {
+  background-color: #07042d;
+  width: 280px;
+  height: 370px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  transition: scale 0.5s ease-out;
+
+  /* #1e2029 */
+  /* #060821 */
+  /* #36305c */
+}
+
+.contributor-card:hover {
+  scale: 1.3;
+  background-color: #060821;
+
+  /* #1e2029 */
+  /* #060821 */
+  /* #36305c */
+}
+#contributors h2 {
+  margin-bottom: 100px;
+  padding: 50px;
+}
+
+.contributor-img {
+  border-radius: 50%;
+  width: 180px;
+  object-fit: contain;
+}
+
+.contributor-name {
+  font-family: stellar;
+  margin-top: 50px;
+}
+
+.social-icons {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.social-icons i {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.icons {
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.icons:hover {
+  color: #07042d;
+  background-color: white;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: #07042d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#github {
+  width: 150px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#github-logo {
+  scale: 1.5;
+  position: relative;
+  left: 10px;
+}
+
+.copyright {
+  color: white;
+  font-size: 13px;
+  font-family: "Fredoka", sans-serif;
+}
