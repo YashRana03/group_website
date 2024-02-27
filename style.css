@@ -8,12 +8,6 @@ html {
 }
 
 @font-face {
-  font-family: ostrich;
-  src: url("./ostrich-sans-master/OstrichSans-Light.otf");
-  letter-spacing: 20px;
-}
-
-@font-face {
   font-family: stellar;
   src: url("./PPStellar-Light.otf");
   letter-spacing: 20px;
@@ -25,32 +19,16 @@ html {
   letter-spacing: 20px;
 }
 
-.fredoka-regular {
-  font-family: "Fredoka", sans-serif;
-  font-optical-sizing: auto;
-  /* font-weight: <weight>; */
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-
 .open-sans {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  /* font-variation-settings: "wdth" 100; */
 }
 
 .roboto-regular {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-style: normal;
-}
-
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -84,9 +62,12 @@ nav {
 
 #qmul-logo {
   border-radius: 50%;
-  position: absolute;
-  left: 100px;
-  top: -15px;
+  position: relative;
+  width: 55px;
+  height: 55px;
+
+  /* left: 100px; */
+  /* top: -15px; */
 }
 
 .flex1 {
@@ -98,10 +79,21 @@ nav {
 
 .flex2 {
   width: 30%;
-  min-width: 450px;
+  min-width: 250px;
   display: flex;
   justify-content: space-evenly;
-  position: relative;
+
+  /* background-color: pink; */
+  align-items: center;
+}
+
+.flex3 {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 70px;
+  /* background-color: purple; */
 }
 
 .under-line {
@@ -128,7 +120,9 @@ nav {
 /* HERO SECTION */
 
 #hero {
-  margin-bottom: 500px;
+  /* margin-bottom: 500px; */
+  min-height: 100vh;
+  margin-bottom: 200px;
 }
 
 .hero-container {
@@ -149,11 +143,11 @@ nav {
   font-size: 30px;
 }
 
-#hero h2 {
+#hero h1 {
   font-family: stellar;
 }
 
-.hero-btn {
+button {
   padding: 20px 60px;
   border: none;
   outline: none;
@@ -165,7 +159,7 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 }
-.hero-btn::before {
+button::before {
   content: "";
   position: absolute;
   left: 3px;
@@ -176,7 +170,7 @@ nav {
   z-index: -1;
   transition: 200ms;
 }
-.hero-btn::after {
+button::after {
   content: attr(data);
   font-size: 16px;
   background: linear-gradient(to left, #00ffa3, #800080);
@@ -184,7 +178,7 @@ nav {
   color: transparent;
   transition: 200ms;
 }
-.hero-btn:hover::before {
+button:hover::before {
   opacity: 100%;
   top: 0px;
   right: 0px;
@@ -192,7 +186,7 @@ nav {
   left: 0px;
   background-color: white;
 }
-.hero-btn:hover {
+button:hover {
   color: black;
 }
 .arrow-icon {
@@ -208,23 +202,29 @@ nav {
 
 #product {
   position: relative;
-  width: 800px;
+  width: 100%;
   height: 500px;
-  margin: 150px auto;
+  margin: 0px auto;
+}
+
+.product {
+  /* background-color: pink; */
+  position: relative;
+  width: 800px;
   perspective: 1400px;
   transform-style: preserve-3d;
-
-  /* background-color: red; */
+  margin: 0px auto;
 }
-#product h2 {
+
+.product h2 {
   position: relative;
   top: -200px;
   text-align: center;
   padding: 50px;
 }
 
-#product label,
-#product label img {
+.product label,
+.product label img {
   position: absolute;
   width: 600px;
   height: 350px;
@@ -237,7 +237,7 @@ nav {
   transition: transform 500ms ease;
 }
 
-#product img {
+.product img {
   border: 5px solid #fff;
   object-fit: cover;
 }
@@ -331,17 +331,22 @@ input[type="radio"] {
 /* VIDEO SECTION */
 
 #video-section {
-  margin-bottom: 200px;
+  position: relative;
+  /* margin-bottom: 200px; */
 }
 
 #video {
   border-radius: 10px;
+  width: 600px;
+  height: 450px;
 }
 
 #video-section h2 {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 /* END OF VIDEO SECTION */
+
+/* CONTRIBUTORS SECTION */
 
 #contributors {
   /* background-color: red; */
@@ -350,10 +355,12 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   margin-bottom: 150px;
+  position: relative;
 }
 
 .contributors-container {
-  width: 1000px;
+  max-width: 1000px;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,22 +377,14 @@ input[type="radio"] {
   align-items: center;
   margin: 20px;
   transition: scale 0.5s ease-out;
-
-  /* #1e2029 */
-  /* #060821 */
-  /* #36305c */
 }
 
 .contributor-card:hover {
   scale: 1.3;
   background-color: #060821;
-
-  /* #1e2029 */
-  /* #060821 */
-  /* #36305c */
 }
 #contributors h2 {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   padding: 50px;
 }
 
@@ -423,6 +422,10 @@ input[type="radio"] {
   background-color: white;
 }
 
+/* END OF CONTRIBUTORS SECTION */
+
+/* FOOTER */
+
 #footer {
   display: flex;
   justify-content: center;
@@ -430,7 +433,7 @@ input[type="radio"] {
 
 .footer {
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-color: #07042d;
   display: flex;
   flex-direction: column;
@@ -438,9 +441,9 @@ input[type="radio"] {
 }
 
 #github {
-  width: 150px;
-  height: 40px;
-  border-radius: 15px;
+  width: 230px;
+  height: 60px;
+
   border: none;
   background-color: white;
   margin-bottom: 10px;
@@ -458,4 +461,240 @@ input[type="radio"] {
   color: white;
   font-size: 13px;
   font-family: "Fredoka", sans-serif;
+  position: relative;
+  top: 30px;
+}
+
+/* END OF NAVBAR */
+
+@media only screen and (max-width: 950px) {
+  .product {
+    width: 600px;
+  }
+
+  .product label,
+  .product label img {
+    width: 450px;
+    height: 263px;
+  }
+  .card-title {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .hero img {
+    width: 400px;
+  }
+
+  #hero h1 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #video {
+    width: 500px;
+    height: 375px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  nav {
+    padding: 30px 10px;
+  }
+
+  .flex2,
+  .flex3 {
+    min-width: 200px;
+    font-size: 13px;
+  }
+
+  .flex3 {
+    margin-left: 20px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .product {
+    width: 400px;
+    /* left: 30px; */
+  }
+
+  .product h2 {
+    width: 500px;
+    position: relative;
+    left: -30px;
+  }
+
+  .product label,
+  .product label img {
+    width: 325px;
+    height: 190px;
+  }
+
+  .product label img,
+  .card-body {
+    border: 2px solid white;
+    overflow-y: scroll;
+  }
+  .card-title {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .card-text {
+    font-size: 13px;
+  }
+
+  #video-section {
+    top: -250px;
+  }
+
+  #contributors {
+    top: -225px;
+    margin-bottom: 50px;
+  }
+
+  #contributors h2 {
+    margin-bottom: 30px;
+  }
+
+  #video-section h2 {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #qmul-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  #hero img {
+    width: 400px;
+  }
+
+  #hero h1 {
+    font-size: 30px;
+  }
+
+  #video {
+    width: 400px;
+    height: 300px;
+  }
+
+  .product {
+    width: 300px;
+    left: -30px;
+  }
+
+  .product h2 {
+    width: 400px;
+  }
+
+  .product label,
+  .product label img {
+    width: 275px;
+    height: 160px;
+  }
+  .card-title {
+    margin-top: -10px;
+    font-size: 15px;
+  }
+  .card-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  #hero {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .flex2,
+  .flex3 {
+    min-width: 150px;
+    font-size: 12px;
+  }
+
+  .flex2 {
+    width: 175px;
+    justify-content: space-between;
+  }
+  .flex3 {
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .flex1 {
+    flex-direction: column;
+  }
+
+  #qmul-logo {
+    left: -7px;
+  }
+
+  #hero img {
+    width: 300px;
+  }
+
+  #hero h1 {
+    width: 300px;
+  }
+
+  #video {
+    width: 300px;
+    height: 225px;
+  }
+
+  .product {
+    width: 250px;
+    left: -30px;
+  }
+  .product h2 {
+    width: 350px;
+  }
+
+  .product label,
+  .product label img {
+    width: 250px;
+    height: 145px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #video {
+    width: 250px;
+    height: 187.5px;
+  }
+
+  .product {
+    width: 200px;
+    left: -30px;
+  }
+  .product h2 {
+    width: 300px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  .product label,
+  .product label img {
+    width: 200px;
+    height: 116px;
+  }
+  .card-title {
+    margin-top: -10px;
+    font-size: 13px;
+  }
+  .card-text {
+    font-size: 10px;
+    line-height: 15px;
+  }
 }
