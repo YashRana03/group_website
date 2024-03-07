@@ -285,7 +285,8 @@ button:hover {
 
 .card-text {
   font-size: 15px;
-  color: #bbbbbb;
+  /* color: #bbbbbb; */
+  color: #d9dddc;
   font-family: "Fredoka", sans-serif;
   line-height: 20px;
 }
